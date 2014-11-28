@@ -32,5 +32,6 @@ Fog 1.25 (執筆時点最新版) では OpenStack Neutron 上でサブネット�
 ----
 
 ```bash
+# wget https://github.com/jedipunkz/chapter12/raw/master/fog-patch/patch-to-create-subnet.patch
 # patch -u  /usr/lib64/ruby/gems/2.1.0/gems/fog-1.25.0/lib/fog/openstack/requests/network/create_subnet.rb < patch
 ```
