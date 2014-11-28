@@ -1,0 +1,65 @@
+- provider: openstack
+  name: instance-lb
+  flavor_id: 100
+  image_id: 4e61e2f6-9c9b-4d08-b90f-21d848b73390
+  key_name: hpwork01_key
+  availability_zone: az1
+  networks:
+    - dmz-net
+    - app-net
+  security_group_ids:
+    - sg-all-from-console
+    - sg-all-from-app-net
+    - sg-web-from-internet
+- provider: openstack
+  name: instance-web-01
+  flavor_id: 100
+  image_id: 4e61e2f6-9c9b-4d08-b90f-21d848b73390
+  key_name: hpwork01_key
+  availability_zone: az1
+  networks:
+    - dmz-net
+    - app-net
+  security_group_ids:
+    - sg-all-from-console
+    - sg-all-from-app-net
+    - sg-web-from-internet
+- provider: openstack
+  name: instance-web-02
+  flavor_id: 100
+  image_id: 4e61e2f6-9c9b-4d08-b90f-21d848b73390
+  key_name: hpwork01_key
+  availability_zone: az1
+  networks:
+    - dmz-net
+    - app-net
+  security_group_ids:
+    - sg-all-from-console
+    - sg-all-from-app-net
+    - sg-web-from-internet
+- provider: openstack
+  name: instance-app
+  flavor_id: 100
+  image_id: 4e61e2f6-9c9b-4d08-b90f-21d848b73390
+  key_name: hpwork01_key
+  availability_zone: az1
+  networks:
+    - dmz-net
+    - app-net
+    - dbs-net
+  security_group_ids:
+    - sg-all-from-console
+    - sg-all-from-app-net
+    - sg-all-from-dbs-net
+- provider: openstack
+  name: instance-dbs
+  flavor_id: 100
+  image_id: 4e61e2f6-9c9b-4d08-b90f-21d848b73390
+  key_name: hpwork01_key
+  availability_zone: az1
+  networks:
+    - dmz-net
+    - dbs-net
+  security_group_ids:
+    - sg-all-from-console
+    - sg-all-from-dbs-net
