@@ -25,4 +25,4 @@ fog ディレクトリに格納されているのは書籍で扱う Fog 用サ�
 
 * nginx
 
-未定
+    https://github.com/josug-book1-materials/nginx
